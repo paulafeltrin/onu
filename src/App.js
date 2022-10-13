@@ -13,38 +13,38 @@ export default function App(){
     <>
       <GlobalStyle />
       <Header />
-      <S.Body>
+      <S.Main>
         <Card
           num={1}
           title="Leitura"
-          Children={<BiBookReader />}
+          Children={<BiBookReader size={120}/>}
         />
         <Card
           num={2}
           title="Horta comunitária" 
-          Children={<FaSeedling />}
+          Children={<FaSeedling size={120} />}
         />
         <Card
           num={3}
           title="Saneamento básico" 
-          Children={<TbRecycle/>}
+          Children={<TbRecycle size={120}/>}
         />
         <Card
           num={4}
           title="Ciclofaixa" 
-          Children={<BiCycling/>}   
+          Children={<BiCycling size={120}/>}   
         />
         <Card
           num={5}
           title="Acessibilidade" 
-          Children={<FaWheelchair/>}   
+          Children={<FaWheelchair size={120}/>}   
         />
         <Card
           num={6}
           title="Creches" 
-          Children={<FaBaby />}
+          Children={<FaBaby size={120}/>}
         />
-      </S.Body>
+      </S.Main>
       <Footer/>
     </>
   )

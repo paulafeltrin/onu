@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing:border-box;
   }
 `
-export const Body = styled.body`
+export const Main = styled.main`
 display: flex;
 justify-content: space-around;
 max-width: 1080px;
