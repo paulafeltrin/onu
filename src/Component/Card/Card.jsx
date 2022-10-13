@@ -1,4 +1,3 @@
-import { Children } from 'react'
 import * as S from './style'
 
 export default function Card({num,title, Children}){
