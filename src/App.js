@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import {GlobalStyle} from "../src/Component/Global/global"
 import Header from './Component/Header/Header'
 import Footer from './Component/Footer/Footer'

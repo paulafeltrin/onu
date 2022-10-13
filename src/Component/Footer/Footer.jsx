@@ -8,13 +8,13 @@ return(
         <footer>
             <ul>
                 <li>
-                    <a href="https://www.linkedin.com/in/paulafeltrin/"target="_blank"><AiFillLinkedin/></a>
+                    <a href="https://www.linkedin.com/in/paulafeltrin/"target="_blank"rel="noreferrer"><AiFillLinkedin/></a>
                 </li>
                 <li>
-                    <a href="https://github.com/paulafeltrin?tab=repositories"target="_blank"><GoMarkGithub/></a>
+                    <a href="https://github.com/paulafeltrin?tab=repositories"target="_blank"rel="noreferrer"><GoMarkGithub/></a>
                 </li>
                 <li>
-                    <a href="https://api.whatsapp.com/send?phone=5546999079214&text=Bem-vindo(a)!"target="_blank"><IoLogoWhatsapp/></a>
+                    <a href="https://api.whatsapp.com/send?phone=5546999079214&text=Bem-vindo(a)!"target="_blank"rel="noreferrer"><IoLogoWhatsapp/></a>
                 </li>
             </ul>
         </footer>
