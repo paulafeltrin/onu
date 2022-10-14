@@ -1,5 +1,4 @@
 import {createGlobalStyle} from 'styled-components';
-import styled from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -7,10 +6,4 @@ export const GlobalStyle = createGlobalStyle`
     padding:0;
     box-sizing:border-box;
   }
-`
-export const Main = styled.main`
-display: flex;
-justify-content: space-around;
-max-width: 1080px;
-margin: 0 auto;
 `

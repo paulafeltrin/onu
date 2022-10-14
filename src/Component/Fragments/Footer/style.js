@@ -6,7 +6,7 @@ margin: 0 auto;
 border: 1px solid purple;
 display: flex;
 justify-content: flex-end;
-padding: 5vh 0;
+padding: 3.4vh 0;
 `
 export const Ul = styled.ul`
 display: flex;
