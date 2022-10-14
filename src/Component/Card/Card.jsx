@@ -2,7 +2,6 @@ import * as S from './style'
 
 export default function Card({num,title, Children}){
   return(
-    <S.Section>
       <S.Div>
         <S.Head>
           <S.Num>{num}</S.Num>
@@ -10,6 +9,5 @@ export default function Card({num,title, Children}){
         </S.Head>
         <S.Img>{Children}</S.Img>
       </S.Div>
-    </S.Section>
   )
 }

@@ -1,19 +1,15 @@
 import styled from 'styled-components'
 
-export const Section= styled.section`
-/* width: 15vw; */
-/* height: 27vh; */
-/* border: 1px solid red; */
-display: flex;
-`
-
 export const Div = styled.div`
 border: 2px solid black;
+
+&:hover{
+  cursor: pointer;
+}
 
 &:active{
   border: 2px solid blue;
   border-radius: 5%;
-  cursor: pointer;
 }
 `
 export const Head = styled.div`
@@ -24,7 +20,6 @@ font-size: 2.5rem;
 font-weight: bolder;
 padding: .7vh .7vw;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-/* border: 1px solid red; */
 `
 export const Topic =styled.h2`
 font-size: 1.7rem;
@@ -34,7 +29,6 @@ display: flex;
 padding: 0 2vw;
 justify-content: center;
 align-items: center;
-/* border: 1px solid red; */
 `
 export const Img = styled.div`
 display: flex;
