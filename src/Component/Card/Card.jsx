@@ -8,6 +8,7 @@ export default function Card({num,title, Children}){
           <S.Topic>{title}</S.Topic>
         </S.Head>
         <S.Img>{Children}</S.Img>
+        {/* <S.Button>{btn}</S.Button> */}
       </S.Div>
   )
 }

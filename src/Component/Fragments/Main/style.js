@@ -9,6 +9,7 @@ margin: 0 auto;
 padding: 4.5vh 0;
 border: 1px solid green;
 `
+
 export const CardOne = styled.div`
 background-color: #C5192D;
 margin: 2vh 3vw;
@@ -30,6 +31,6 @@ background-color: #FF3A21;
 margin: 2vh 3vw;
 `
 export const CardSix = styled.div`
-background-color: #FD9D24;
+background-color: #DD1367;
 margin: 2vh 3vw;
 `

@@ -1,16 +1,8 @@
 import styled from 'styled-components'
 
 export const Div = styled.div`
-border: 2px solid black;
-
-&:hover{
-  cursor: pointer;
-}
-
-&:active{
-  border: 2px solid blue;
-  border-radius: 5%;
-}
+cursor: pointer;
+color: white;
 `
 export const Head = styled.div`
 display: flex;
