@@ -10,10 +10,6 @@ import { TbRecycle } from 'react-icons/tb';
 export default function Main(){
     const [status, setStatus] = useState(false)
 
-    function handleModal(){
-          setStatus(!status)
-    }
-
     return(
         <S.Main>
             <S.CardOne onClick={()=>{setStatus(true)}}>
@@ -24,7 +20,7 @@ export default function Main(){
                             <li>Incentivar a leitura desde cedo</li>
                             <li>Promover concursos literários no bairro</li>
                             <li>Interpretação textual</li>
-                        </ul>
+                        </ul>                        
                     </Modal>
                     )
                     : null }
@@ -46,7 +42,6 @@ export default function Main(){
                             <li>Doação do terreno pela prefeitura</li>
                             <li>Manutenção da horta pela comunidade</li>
                         </ul>
-                        <button onClick={()=>{handleModal()}}>X</button>
                     </Modal>
                 )
                 : null }
@@ -95,10 +90,12 @@ export default function Main(){
             <S.CardFive onClick={()=>{setStatus(true)}}>
                 {status ? (
                     <Modal onClose={() => setStatus(false)}>
-                        <h3>Acessibilidade</h3>
-                        <ul>
-                            <li>Construção de rampas de acesso</li>
-                        </ul>
+                        <children>
+                            <h3>Acessibilidade</h3>
+                            <ul>
+                                <li>Construção de rampas de acesso</li>
+                            </ul>
+                        </children>
                     </Modal>
                 )
                 : null }
@@ -112,8 +109,11 @@ export default function Main(){
             <S.CardSix onClick={()=>{setStatus(true)}}>
                 {status ? (
                     <Modal onClose={() => setStatus(false)}>
-                        <p>Creches</p>
-                        <p>Primeiro contado das crianças na sociedade.</p>
+                        <children>
+                            <h3>Creches</h3>
+                            <p>Primeiro contado das crianças na sociedade depois da família.</p>
+                            <p>Proporcionar aos pais maior viabilidade no mercado de trabalho.</p>
+                        </children>
                     </Modal>
                 )
                 : null }
