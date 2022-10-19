@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import {Modal} from '../Modal/Modal'
+import Acessibilidade from '../../../Pages/Melhoria/Acessibilidade'
+import Ciclofaixa from '../../../Pages/Melhoria/Ciclofaixa'
+import Creche from '../../../Pages/Melhoria/Creche'
+import Horta from '../../../Pages/Melhoria/Horta'
+import Leitura from '../../../Pages/Melhoria/Leitura'
+import Saneamento from '../../../Pages/Melhoria/Saneamento'
+
+import Modal from 'react-modal'
 import Card from '../../Card/Card'
 import * as S from './style'
 
@@ -8,22 +15,56 @@ import { FaWheelchair, FaSeedling, FaBaby } from 'react-icons/fa';
 import { TbRecycle } from 'react-icons/tb';
 
 export default function Main(){
-    const [status, setStatus] = useState(false)
+    const [pgAcessibilidade, setPgAcessibilidade] = useState(false)
+    const [pgCiclo, setPgCiclo] = useState(false)
+    const [pgCreche, setPgCreche] = useState(false)
+    const [pgHorta, setPgHorta] = useState(false)
+    const [pgLeitura, setPgLeitura] = useState(false)
+    const [pgSaneamento, setPgSaneamento] = useState(false)
+
+
+    function ChangeAcessibilidade(){
+        setPgAcessibilidade(!pgAcessibilidade)
+    }
+
+    function ChangeCiclo(){
+        setPgCiclo(!pgCiclo)
+    }
+
+    function ChangeCreche(){
+        setPgCreche(!pgCreche)
+    }
+
+    function ChangeHorta(){
+        setPgHorta(!pgHorta)
+    }
+
+    function ChangeLeitura(){
+        setPgLeitura(!pgLeitura)
+    }
+
+    function ChangeSaneamento(){
+        setPgSaneamento(!pgSaneamento)
+    }
 
     return(
         <S.Main>
-            <S.CardOne onClick={()=>{setStatus(true)}}>
-                {status ? (
-                    <Modal onClose={() => setStatus(false)}>
-                        <h3>Incentivo a leitura</h3>
-                        <ul>
-                            <li>Incentivar a leitura desde cedo</li>
-                            <li>Promover concursos literários no bairro</li>
-                            <li>Interpretação textual</li>
-                        </ul>                        
-                    </Modal>
-                    )
-                    : null }
+            <S.CardOne onClick={()=>{ChangeLeitura()}}>
+                <Modal 
+                    isOpen={pgLeitura} 
+                    onRequestClose={ChangeLeitura}
+                    style={{
+                        overlay:{
+                            backgroundColor:'rgb(197, 25, 45)',
+                        },
+                        content:{
+                            backgroundColor:  'rgba(255, 255, 255, 0.85)',
+                            borderRadius: '2%',
+                        }
+                    }}
+                >
+                    <Leitura />
+                </Modal>
                 <Card
                     num={1}
                     title="Leitura"
@@ -31,20 +72,22 @@ export default function Main(){
                 />
             </S.CardOne>
 
-            <S.CardTwo onClick={()=>{setStatus(true)}}>
-                {status ? (
-                    <Modal onClose={() => setStatus(false)}>
-                        <h3>Horta comunitária</h3>
-                        <ul>
-                            <li>Objetivo de construir e manter uma horta no bairro</li>
-                            <li>Diminuir custos com alimentação</li>
-                            <li>Incentivar a alimentação saudável</li>
-                            <li>Doação do terreno pela prefeitura</li>
-                            <li>Manutenção da horta pela comunidade</li>
-                        </ul>
-                    </Modal>
-                )
-                : null }
+            <S.CardTwo onClick={()=>{ChangeHorta()}}>
+                <Modal 
+                    isOpen={pgHorta} 
+                    onRequestClose={ChangeHorta}
+                    style={{
+                        overlay:{
+                            backgroundColor: 'rgb(86, 192, 43)',
+                        },
+                        content:{
+                            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                            borderRadius: '2%',
+                        }
+                    }}
+                >
+                    <Horta />
+                </Modal>
                 <Card
                     num={2}
                     title="Horta comunitária" 
@@ -52,17 +95,22 @@ export default function Main(){
                 />
             </S.CardTwo>
 
-            <S.CardThree onClick={()=>{setStatus(true)}}>
-                {status ? (
-                    <Modal onClose={() => setStatus(false)}>
-                        <h3>Saneamento Básico</h3>
-                        <ul>
-                            <li>Objetivo de todas as casas possuir rede canalizada de esgoto</li>
-                            <li>Diminuir a poluição dos rios e córregos</li>
-                        </ul>
-                    </Modal>
-                )
-                : null }
+            <S.CardThree onClick={()=>{ChangeSaneamento()}}>
+                <Modal 
+                    isOpen={pgSaneamento} 
+                    onRequestClose={ChangeSaneamento}
+                    style={{
+                        overlay:{
+                            backgroundColor:'rgb(10, 151, 217)',
+                        },
+                        content:{
+                            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                            borderRadius: '2%',
+                        }
+                    }}
+                >
+                    <Saneamento />
+                </Modal>
                 <Card
                     num={3}
                     title="Saneamento Básico" 
@@ -70,16 +118,22 @@ export default function Main(){
                 />
             </S.CardThree>
 
-            <S.CardFour onClick={()=>{setStatus(true)}}>
-                {status ? (
-                    <Modal onClose={() => setStatus(false)}>
-                        <h3>Ciclofaixa</h3>
-                        <ul>
-                            <li>Construção de ciclofaixa na rodovia PR 180, visto que é extensivamente utilizada para práticas esportivas</li>
-                        </ul>
-                    </Modal>
-                )
-                : null }
+            <S.CardFour onClick={()=>{ChangeCiclo()}}>
+                <Modal 
+                    isOpen={pgCiclo} 
+                    onRequestClose={ChangeCiclo}
+                    style={{
+                        overlay:{
+                            backgroundColor: 'rgb(221, 166, 58)',
+                        },
+                        content:{
+                            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                            borderRadius: '2%',
+                        }
+                    }}
+                >
+                    <Ciclofaixa />
+                </Modal>
                 <Card
                     num={4}
                     title="Ciclofaixa" 
@@ -87,18 +141,22 @@ export default function Main(){
                 />
             </S.CardFour>
 
-            <S.CardFive onClick={()=>{setStatus(true)}}>
-                {status ? (
-                    <Modal onClose={() => setStatus(false)}>
-                        <children>
-                            <h3>Acessibilidade</h3>
-                            <ul>
-                                <li>Construção de rampas de acesso</li>
-                            </ul>
-                        </children>
-                    </Modal>
-                )
-                : null }
+            <S.CardFive onClick={()=>{ChangeAcessibilidade()}}>
+                <Modal 
+                    isOpen={pgAcessibilidade} 
+                    onRequestClose={ChangeAcessibilidade}
+                    style={{
+                        overlay:{
+                            backgroundColor: 'rgb(255, 58, 33)',
+                        },
+                        content:{
+                            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                            borderRadius: '2%',
+                        }
+                    }}
+                >
+                    <Acessibilidade />
+                </Modal>
                 <Card
                     num={5}
                     title="Acessibilidade" 
@@ -106,17 +164,22 @@ export default function Main(){
                 />
             </S.CardFive>
 
-            <S.CardSix onClick={()=>{setStatus(true)}}>
-                {status ? (
-                    <Modal onClose={() => setStatus(false)}>
-                        <children>
-                            <h3>Creches</h3>
-                            <p>Primeiro contado das crianças na sociedade depois da família.</p>
-                            <p>Proporcionar aos pais maior viabilidade no mercado de trabalho.</p>
-                        </children>
-                    </Modal>
-                )
-                : null }
+            <S.CardSix onClick={()=>{ChangeCreche()}}>
+            <Modal 
+                    isOpen={pgCreche} 
+                    onRequestClose={ChangeCreche}
+                    style={{
+                        overlay:{
+                            backgroundColor: 'rgb(221, 19, 103)',
+                        },
+                        content:{
+                            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                            borderRadius: '2%',
+                        }
+                    }}
+                >
+                    <Creche />
+                </Modal>
                 <Card
                     num={6}
                     title="Creches" 
