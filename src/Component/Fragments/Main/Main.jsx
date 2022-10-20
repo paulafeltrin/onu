@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Acessibilidade from '../../../Pages/Melhoria/Acessibilidade'
-import Ciclofaixa from '../../../Pages/Melhoria/Ciclofaixa'
-import Creche from '../../../Pages/Melhoria/Creche'
-import Horta from '../../../Pages/Melhoria/Horta'
-import Leitura from '../../../Pages/Melhoria/Leitura'
-import Saneamento from '../../../Pages/Melhoria/Saneamento'
+import { Acessibilidade } from '../../../Pages/Melhoria/Acessibilidade'
+import { Ciclofaixa } from '../../../Pages/Melhoria/Ciclofaixa'
+import { Creche } from '../../../Pages/Melhoria/Creche'
+import { Horta } from '../../../Pages/Melhoria/Horta'
+import { Leitura } from '../../../Pages/Melhoria/Leitura'
+import { Saneamento } from '../../../Pages/Melhoria/Saneamento'
 
 import Modal from 'react-modal'
 import Card from '../../Card/Card'

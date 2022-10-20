@@ -1,7 +1,6 @@
-import React from 'react'
 import * as S from '../style'
 
-export default function Ciclofaixa(){
+export const Ciclofaixa = () => {
     return(
         <section>  
             <S.Content>

@@ -1,7 +1,6 @@
-import React from 'react'
 import * as S from '../style'
 
-export default function Acessibilidade(){
+export const Acessibilidade = () => {
     return(
         <section>  
             <S.Content>

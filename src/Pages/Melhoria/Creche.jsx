@@ -1,7 +1,6 @@
-import React from 'react'
 import * as S from '../style'
 
-export default function Creche(){
+export const Creche = () => {
     return(
         <section>  
             <S.Content>

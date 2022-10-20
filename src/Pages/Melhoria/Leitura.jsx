@@ -1,7 +1,6 @@
-import React from 'react'
 import * as S from '../style'
 
-export default function Leitura(){
+export const Leitura = () => {
     return(
         <section>  
             <S.Content>
